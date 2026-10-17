@@ -56,7 +56,7 @@
     const ribbon = document.createElement('div'); ribbon.className = 'demo-ribbon';
     const bk = document.getElementById('bk'); if (bk) bk.prepend(note);
     document.body.appendChild(ribbon);
-    const upd = () => { const l = document.documentElement.lang === 'en' ? 'en' : 'fa'; note.textContent = '🧪 ' + TXT[l]; ribbon.textContent = l === 'en' ? 'Demo preview' : 'نسخه پیش‌نمایش'; };
+    const upd = () => { const l = document.documentElement.lang === 'en' ? 'en' : 'fa'; note.textContent = '🧪 ' + TXT[l]; ribbon.textContent = l === 'en' ? 'Demo version — not real data' : 'نسخه نمایشی — اطلاعات واقعی نیست'; };
     upd(); new MutationObserver(upd).observe(document.documentElement, { attributes: true, attributeFilter: ['lang'] });
   });
 })();
